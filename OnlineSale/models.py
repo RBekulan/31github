@@ -15,4 +15,3 @@ class Product(models.Model):
     date_create = models.DateField(auto_now_add=True, null=True, blank=True)
     number_phone = models.CharField(max_length=230)
     breed = models.CharField(max_length=230, null=True, blank=True)
-    search_fields = models.CharField(max_length=230)

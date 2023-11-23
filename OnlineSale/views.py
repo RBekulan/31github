@@ -3,7 +3,7 @@ from .serializers import *
 from rest_framework import generics
 from .models import *
 from rest_framework import filters
-
+from rest_framework.response import Response
 
 
 class ProductList(mixins.ListModelMixin,
@@ -35,10 +35,9 @@ class ProductDetail(mixins.RetrieveModelMixin,
     def delete(self, request, *args, **kwargs):
         return self.destroy(request, *args, **kwargs)
 
-
-class SearchList(generics.ListCreateAPIView):
-    def search(self, request):
-        queryset = Product.objects.all()
-        serializer_class = ProductsSerializer
-        filter_backends = [filters.SearchFilter]
-        search_fields = ['name', 'description']
+# class SearchList(generics.ListCreateAPIView):
+#     def search(self, request):
+#         queryset = Product.objects.all()
+#         serializer_class = ProductsSerializer
+#         filter_backends = [filters.SearchFilter]
+#         search_fields = ['name', 'description']
