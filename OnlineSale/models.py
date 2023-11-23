@@ -14,6 +14,5 @@ class Product(models.Model):
     years = models.IntegerField(blank=True, null=True)
     date_create = models.DateField(auto_now_add=True, null=True, blank=True)
     number_phone = models.CharField(max_length=230)
-    favorites = models.BooleanField(default=False, null=True, blank=True)
     breed = models.CharField(max_length=230, null=True, blank=True)
     search_fields = models.CharField(max_length=230)
