@@ -1,5 +1,5 @@
 from rest_framework import mixins
-from product.serializers import *
+from .serializers import *
 from rest_framework import generics
 from .models import *
 from rest_framework import filters
