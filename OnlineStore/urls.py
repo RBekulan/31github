@@ -17,12 +17,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from OnlineSale.views import *
+from Car.views import *
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/products/', ProductList.as_view()),
     path('api/v1/product/<int:pk>/', ProductDetail.as_view()),
+    path('api/v1/cars/', CarList.as_view()),
+    path('api/v1/car/<int:pk>/', CarDetail.as_view())
 ]
 # path('api/v1/search/', SearchList.as_view(), name='product-list'),
 
