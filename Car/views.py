@@ -5,10 +5,10 @@ from .models import *
 
 
 class CarList(mixins.ListModelMixin,
-                  mixins.CreateModelMixin,
-                  generics.GenericAPIView):
+              mixins.CreateModelMixin,
+              generics.GenericAPIView):
     queryset = CarOnline.objects.all()
-    serializer_class = ProductsSerializer
+    serializer_class = CarOnlineSerializer
 
     def get(self, request, *args, **kwargs):
         return self.list(request, *args, **kwargs)
@@ -18,11 +18,11 @@ class CarList(mixins.ListModelMixin,
 
 
 class CarDetail(mixins.RetrieveModelMixin,
-                    mixins.UpdateModelMixin,
-                    mixins.DestroyModelMixin,
-                    generics.GenericAPIView):
+                mixins.UpdateModelMixin,
+                mixins.DestroyModelMixin,
+                generics.GenericAPIView):
     queryset = CarOnline.objects.all()
-    serializer_class = ProductsSerializer
+    serializer_class = CarOnlineSerializer
 
     def get(self, request, *args, **kwargs):
         return self.retrieve(request, *args, **kwargs)
@@ -32,3 +32,6 @@ class CarDetail(mixins.RetrieveModelMixin,
 
     def delete(self, request, *args, **kwargs):
         return self.destroy(request, *args, **kwargs)
+
+
+
