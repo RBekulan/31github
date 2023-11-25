@@ -14,3 +14,4 @@ class CarOnline(models.Model):
     date_create = models.DateField(auto_now_add=True, null=True, blank=True)
     number_phone = models.CharField(max_length=230)
 
+

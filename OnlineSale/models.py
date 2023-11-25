@@ -15,3 +15,12 @@ class Product(models.Model):
     date_create = models.DateField(auto_now_add=True, null=True, blank=True)
     number_phone = models.CharField(max_length=230)
     breed = models.CharField(max_length=230, null=True, blank=True)
+
+
+class ReviewCom(models.Model):
+    review = models.TextField()
+    date = models.DateField(auto_now_add=True)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.review
