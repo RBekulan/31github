@@ -15,3 +15,10 @@ class CarOnline(models.Model):
     number_phone = models.CharField(max_length=230)
 
 
+class ReviewCom(models.Model):
+    review = models.TextField()
+    date = models.DateField(auto_now_add=True)
+    product = models.ForeignKey(CarOnline, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.review

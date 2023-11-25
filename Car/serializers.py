@@ -8,4 +8,7 @@ class CarOnlineSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-
+class ReviewCar(serializers.ModelSerializer):
+    class Meta:
+        model = ReviewCom
+        fields = '__all__'
