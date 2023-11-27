@@ -31,7 +31,3 @@ urlpatterns = [
     path('api/v1/users/authorization/', AuthorizationAPIView.as_view()),
 
 ]
-# path('api/v1/search/', SearchList.as_view(), name='product-list'),
-
-# from product import views
-# from .views import SearchList
