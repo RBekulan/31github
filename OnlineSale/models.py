@@ -16,6 +16,9 @@ class Product(models.Model):
     number_phone = models.CharField(max_length=230)
     breed = models.CharField(max_length=230, null=True, blank=True)
 
+    def __str__(self):
+        return self.description
+
 
 class ReviewCom(models.Model):
     review = models.TextField()
