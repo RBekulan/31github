@@ -5,6 +5,9 @@ from django.contrib.auth.models import User
 class Category(models.Model):
     name_category = models.CharField(max_length=230)
 
+    def __str__(self):
+        return self.name_category
+
 
 class CarOnline(models.Model):
     image = models.ImageField()
