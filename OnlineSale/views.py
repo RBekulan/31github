@@ -19,6 +19,7 @@ class ProductList(mixins.ListModelMixin,
         return self.create(request, *args, **kwargs)
 
 
+
 class ProductDetail(mixins.RetrieveModelMixin,
                     mixins.UpdateModelMixin,
                     mixins.DestroyModelMixin,
