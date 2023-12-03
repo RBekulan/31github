@@ -35,3 +35,5 @@ class CarDetail(mixins.RetrieveModelMixin,
 
 
 
+
+
