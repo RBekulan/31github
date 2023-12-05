@@ -20,6 +20,7 @@ class ProductList(mixins.ListModelMixin,
 
 
 
+
 class ProductDetail(mixins.RetrieveModelMixin,
                     mixins.UpdateModelMixin,
                     mixins.DestroyModelMixin,
