@@ -32,6 +32,7 @@ class ConfirmUserAPIView(APIView):
         return Response({'status': 'User activated'}, status=status.HTTP_200_OK)
 
 
+
 class AuthorizationAPIView(APIView):
     def post(self, request, *args, **kwargs):
         serializer = UserLoginSerializer(data=request.data)
