@@ -1,9 +1,3 @@
-from rest_framework import mixins
-from .serializers import *
-from rest_framework import generics
-from .models import *
-
-
 from rest_framework import generics, mixins
 from .models import CarOnline
 from .serializers import CarOnlineSerializer
