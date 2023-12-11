@@ -11,8 +11,6 @@ class CarList(mixins.ListModelMixin,
     queryset = CarOnline.objects.all()
     serializer_class = CarOnlineSerializer
 
-class Car(mixins):
-    pass
 
     def get(self, request, *args, **kwargs):
         """
