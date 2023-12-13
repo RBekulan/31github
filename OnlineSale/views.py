@@ -57,3 +57,4 @@ class ProductDetail(mixins.RetrieveModelMixin,
         Delete a specific product instance.
         """
         return self.destroy(request, *args, **kwargs)
+
