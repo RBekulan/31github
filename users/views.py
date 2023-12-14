@@ -33,6 +33,7 @@ class ConfirmUserAPIView(APIView):
 
 
 
+
 class AuthorizationAPIView(APIView):
     def post(self, request, *args, **kwargs):
         serializer = UserLoginSerializer(data=request.data)
