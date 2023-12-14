@@ -20,6 +20,7 @@ class RegistrationAPIView(APIView):
             return Response({'status': 'User registered', 'code': confirmation.code}, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+    #lk
 
 class ConfirmUserAPIView(APIView):
     def post(self, request):
