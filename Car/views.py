@@ -25,6 +25,9 @@ class CarList(mixins.ListModelMixin,
         return self.create(request, *args, **kwargs)
 
 
+
+
+
 class CarDetail(mixins.RetrieveModelMixin,
                 mixins.UpdateModelMixin,
                 mixins.DestroyModelMixin,
