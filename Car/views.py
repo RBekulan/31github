@@ -2,6 +2,7 @@ from rest_framework import generics, mixins
 from .models import CarOnline
 from .serializers import CarOnlineSerializer
 
+
 class CarList(mixins.ListModelMixin,
               mixins.CreateModelMixin,
               generics.GenericAPIView):
@@ -10,7 +11,6 @@ class CarList(mixins.ListModelMixin,
     """
     queryset = CarOnline.objects.all()
     serializer_class = CarOnlineSerializer
-
 
     def get(self, request, *args, **kwargs):
         """
@@ -23,9 +23,6 @@ class CarList(mixins.ListModelMixin,
         Create a new car online.
         """
         return self.create(request, *args, **kwargs)
-
-
-
 
 
 class CarDetail(mixins.RetrieveModelMixin,
@@ -55,6 +52,3 @@ class CarDetail(mixins.RetrieveModelMixin,
         Delete a specific car online instance.
         """
         return self.destroy(request, *args, **kwargs)
-
-
-
