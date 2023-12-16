@@ -15,6 +15,7 @@ class CarList(mixins.ListModelMixin,
 
 
 
+
     def get(self, request, *args, **kwargs):
         """
         Get a list of cars online.
