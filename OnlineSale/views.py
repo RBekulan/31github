@@ -58,3 +58,5 @@ class ProductDetail(mixins.RetrieveModelMixin,
         """
         return self.destroy(request, *args, **kwargs)
 
+
+
