@@ -52,3 +52,4 @@ class CarDetail(mixins.RetrieveModelMixin,
         Delete a specific car online instance.
         """
         return self.destroy(request, *args, **kwargs)
+

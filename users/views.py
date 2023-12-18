@@ -20,7 +20,8 @@ class RegistrationAPIView(APIView):
             return Response({'status': 'User registered', 'code': confirmation.code}, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    #lk
+    # lk
+
 
 class ConfirmUserAPIView(APIView):
     def post(self, request):
@@ -33,8 +34,6 @@ class ConfirmUserAPIView(APIView):
         return Response({'status': 'User activated'}, status=status.HTTP_200_OK)
 
 
-
-
 class AuthorizationAPIView(APIView):
     def post(self, request, *args, **kwargs):
         serializer = UserLoginSerializer(data=request.data)
@@ -44,5 +43,3 @@ class AuthorizationAPIView(APIView):
             token, created = Token.objects.get_or_create(user=user)
             return Response({'token': token.key})
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
