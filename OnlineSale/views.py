@@ -1,12 +1,11 @@
+from rest_framework import generics, mixins
+from .models import Product
+from .serializers import ProductsSerializer
 
 from rest_framework import generics, mixins
 from .models import Product
 from .serializers import ProductsSerializer
 
-
-from rest_framework import generics, mixins
-from .models import Product
-from .serializers import ProductsSerializer
 
 class ProductList(mixins.ListModelMixin,
                   mixins.CreateModelMixin,
@@ -58,5 +57,5 @@ class ProductDetail(mixins.RetrieveModelMixin,
         """
         return self.destroy(request, *args, **kwargs)
 
-print('text')
 
+print('text')
